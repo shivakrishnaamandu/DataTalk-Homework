@@ -58,9 +58,9 @@ Remember that `lpep_pickup_datetime` and `lpep_dropoff_datetime` columns are in 
 - 17630
 - 21090
     ## SQL Code Q3:
-    select count(1) as total_trips
+    **select count(1) as total_trips
     from green_taxi_trips_2019
-    where cast(lpep_pickup_datetime as date) = '2019-01-15' and cast(lpep_dropoff_datetime as date) = '2019-01-15'
+    where cast(lpep_pickup_datetime as date) = '2019-01-15' and cast(lpep_dropoff_datetime as date) = '2019-01-15'**
 
 ## Question 4. Largest trip for each day
 
