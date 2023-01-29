@@ -72,9 +72,9 @@ Use the pick up time for your calculations.
 - 2019-01-15
 - 2019-01-10
     ## SQL Code Q4:
-    select cast(lpep_pickup_datetime as date) as pick_up_date
+    **select cast(lpep_pickup_datetime as date) as pick_up_date
     from green_taxi_trips_2019
-    where trip_distance = (select max(trip_distance) from green_taxi_trips_2019)
+    where trip_distance = (select max(trip_distance) from green_taxi_trips_2019)**
 
 ## Question 5. The number of passengers
 
@@ -85,12 +85,12 @@ In 2019-01-01 how many trips had 2 and 3 passengers?
 - 2: 1282 ; 3: 254
 - 2: 1282 ; 3: 274
     ## SQL Code Q5:
-    select 
+    **select 
 	passenger_count,
 	count(1) as trips
     from green_taxi_trips_2019
     where cast(lpep_pickup_datetime as date) = '2019-01-01' and passenger_count in (2,3)
-    group by 1
+    group by 1**
 
 ## Question 6. Largest tip
 
@@ -104,7 +104,7 @@ Note: it's not a typo, it's `tip` , not `trip`
 - South Ozone Park
 - Long Island City/Queens Plaza
     ## SQL Code Q6:
-    select zdo."Zone"
+    **select zdo."Zone"
     from green_taxi_trips_2019 as g
     inner join zones as zpu
     on g."PULocationID" = zpu."LocationID"
@@ -114,7 +114,7 @@ Note: it's not a typo, it's `tip` , not `trip`
                             from green_taxi_trips_2019 as g
                             inner join zones as zpu
                             on g."PULocationID" = zpu."LocationID"
-                            where zpu."Zone" = 'Astoria')
+                            where zpu."Zone" = 'Astoria')**
 
 
 ## Submitting the solutions
