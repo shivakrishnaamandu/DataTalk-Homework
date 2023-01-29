@@ -111,10 +111,10 @@ Note: it's not a typo, it's `tip` , not `trip`
     inner join zones as zdo  
     on g."DOLocationID" = zdo."LocationID"  
     where g."tip_amount" = (select max(tip_amount)  
-    +                      from green_taxi_trips_2019 as g  
-    |                      inner join zones as zpu  
-    |                      on g."PULocationID" = zpu."LocationID"  
-    |                      where zpu."Zone" = 'Astoria')_**  
+                          from green_taxi_trips_2019 as g  
+                          inner join zones as zpu  
+                          on g."PULocationID" = zpu."LocationID"  
+                          where zpu."Zone" = 'Astoria')_**  
 
 
 ## Submitting the solutions
